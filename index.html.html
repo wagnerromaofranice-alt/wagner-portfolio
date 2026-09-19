@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta name="description" content="Portefólio de Wagner Romão Franice, estudante de Informática no ITC.">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wagner Romão Franice | Portefólio</title>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&family=Archivo+Black&family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<style>
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  section {
+    position: relative;
+    overflow: hidden;
+    padding: 3.5rem 2rem;
+    max-width: 820px;
+    margin: 0 auto;
+  }
+
+  section::before {
+    content: "";
+    position: absolute;
+    top: -30px;
+    right: -30px;
+    width: 80px;
+    height: 80px;
+    background: #df2531;
+    transform: rotate(45deg);
+    opacity: 0.12;
+  }
+
+    body {
+    font-family: 'Open Sans', Arial, sans-serif;
+    line-height: 1.7;
+    color: #1a1a1a;
+    background: #f7f7f7;
+    background-image: radial-gradient(rgba(223, 37, 49, 0.15) 1.5px, transparent 1.5px);
+    background-size: 22px 22px;
+  }
+
+  header {
+    background: #000000;
+    color: #ffffff;
+    padding: 1.1rem 2.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
+
+  header h1 {
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: #ffffff;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+  }
+
+  nav a {
+    color: #f0f0f0;
+    text-decoration: none;
+    margin-left: 1.3rem;
+    font-size: 0.92rem;
+    font-weight: 600;
+    transition: color 0.3s ease;
+  }
+
+  nav a:hover {
+    color: #df2531;
+  }
+
+  section h2 {
+    margin-bottom: 1.2rem;
+    color: #000000;
+    font-family: 'Archivo Black', sans-serif;
+    font-size: 2.4rem;
+    text-transform: uppercase;
+    letter-spacing: 0.01em;
+    line-height: 1;
+    border-bottom: none;
+    display: block;
+    padding-bottom: 0;
+  }
+
+  .script {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 1.3rem;
+    color: #df2531;
+    display: block;
+    margin-bottom: -0.3rem;
+  }
+
+  .script::after {
+    content: "";
+    display: inline-block;
+    width: 40px;
+    height: 2px;
+    background: #df2531;
+    margin-left: 10px;
+    vertical-align: middle;
+  }
+
+  section p {
+    margin-bottom: 1rem;
+    color: #3a3a3a;
+  }
+
+  .statgrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 1.5rem;
+    text-align: center;
+  }
+
+  .statcard {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .statnum {
+    font-family: 'Archivo Black', sans-serif;
+    font-size: 2.4rem;
+    color: #df2531;
+    line-height: 1;
+  }
+
+  .statlabel {
+    font-size: 0.52rem;
+    color: #5b5b5b;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    margin-top: 0.4rem;
+  }
+
+  /* HERO / APRESENTAÇÃO */
+  .hero {
+    background: linear-gradient(135deg, #000000, #df2531);
+    color: white;
+    text-align: center;
+    padding: 4rem 2rem;
+    max-width: 100%;
+  }
+
+  .foto {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #ffffff;
+    margin: 0 auto 1.5rem;
+    display: block;
+    background: #e0e0e0;
+  }
+
+  .hero h2 {
+    color: white;
+    border: none;
+    font-family: 'Archivo Black', sans-serif;
+    font-size: 2.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.01em;
+    margin-bottom: 0.4rem;
+  }
+
+  .titulo-grande {
+    font-family: 'Archivo Black', sans-serif;
+    font-size: clamp(2.8rem, 9vw, 5.5rem);
+    line-height: 0.95;
+    text-transform: uppercase;
+    color: #ffffff;
+  }
+
+  .titulo-grande .destaque {
+    color: #df2531;
+  }
+
+  .hero .subtitulo {
+    color: #ffffff;
+    font-size: 1.05rem;
+    margin-bottom: 1.5rem;
+    opacity: 0.9;
+  }
+
+  .hero p.bio {
+    max-width: 520px;
+    margin: 0 auto 2rem;
+    color: #f2f2f2;
+  }
+
+  .btn {
+    display: inline-block;
+    background: #ffffff;
+    color: #000000;
+    text-decoration: none;
+    font-weight: 700;
+    padding: 0.7rem 1.5rem;
+    border-radius: 6px;
+    margin: 0.3rem;
+    transition: background 0.2s ease, transform 0.15s ease, color 0.2s ease;
+  }
+
+  .btn i {
+    margin-right: 0.4rem;
+  }
+
+  .btn:hover {
+    background: #df2531;
+    color: #ffffff;
+    transform: translateY(-2px);
+  }
+
+  /* PERCURSO ACADÉMICO */
+  .percurso {
+    list-style: none;
+    border-left: 3px solid #df2531;
+    padding-left: 1.5rem;
+  }
+
+  .percurso li {
+    margin-bottom: 1.4rem;
+    position: relative;
+  }
+
+  .percurso li::before {
+    content: "";
+    width: 12px;
+    height: 12px;
+    background: #000000;
+    border-radius: 50%;
+    position: absolute;
+    left: -1.93rem;
+    top: 5px;
+  }
+
+  .percurso .classe {
+    font-weight: 700;
+    color: #000000;
+    font-size: 1.05rem;
+  }
+
+  .percurso .escola {
+    color: #5a5a5a;
+    font-size: 0.95rem;
+  }
+
+  /* COMPETÊNCIAS */
+  .skillgrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+
+  .skillcard {
+    background: white;
+    border: 1px solid #eaeaea;
+    border-top: 3px solid #df2531;
+    border-radius: 6px;
+    padding: 1.2rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+    .skillcard:hover {
+    transform: translateY(-6px) scale(1.02);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+  } 
+
+  .skillcard h3 {
+    color: #000000;
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 0.4rem;
+  }
+
+  .skillcard p {
+    font-size: 0.9rem;
+    color: #5b5b5b;
+    margin-bottom: 0;
+  }
+
+  /* PROJECTOS */
+  .projectgrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 1.2rem;
+    margin-top: 1rem;
+  }
+
+  .projectcard {
+    background: white;
+    border: 1px solid #eaeaea;
+    border-radius: 6px;
+    padding: 1.4rem;
+  }
+
+  .projectcard span {
+    display: block;
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 1rem;
+    text-transform: none;
+    letter-spacing: 0;
+    color: #df2531;
+    font-weight: 400;
+    margin-bottom: 0.3rem;
+  }
+
+  .projectcard h3 {
+    color: #000000;
+    font-weight: 700;
+    margin-bottom: 0.4rem;
+    font-size: 1.05rem;
+  }
+
+  .projectcard p {
+    font-size: 0.92rem;
+    color: #5b5b5b;
+    margin-bottom: 0;
+  }
+
+  /* CONTACTO */
+  .contacto-section {
+    text-align: center;
+    background: #000000;
+    color: white;
+  }
+
+  .contacto-section h2 {
+    color: white;
+    border-bottom-color: #df2531;
+  }
+
+  .contacto-section p {
+    color: #e0e0e0;
+  }
+
+  footer {
+    text-align: center;
+    padding: 1.6rem;
+    background: #000000;
+    color: #b0b0b0;
+    font-size: 0.85rem;
+    border-top: 2px solid #df2531;
+  }
+
+  .barra {
+    width: 100%;
+    height: 6px;
+    background: #eee;
+    border-radius: 10px;
+    margin-top: 0.8rem;
+    overflow: hidden;
+  }
+
+  .barra-fill {
+    height: 100%;
+    background: #df2531;
+    border-radius: 10px;
+  }
+
+  .projectimg-wrap {
+    overflow: hidden;
+    border-radius: 6px;
+    margin-bottom: 0.9rem;
+  }
+
+  .projectimg {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+  }
+
+  .projectcard:hover .projectimg {
+    transform: scale(1.08);
+  }
+
+  .tabela-competencias {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 2rem;
+    background: white;
+    border-radius: 6px;
+    overflow: hidden;
+  }
+
+  .tabela-competencias th,
+  .tabela-competencias td {
+    padding: 0.8rem 1rem;
+    text-align: left;
+    border-bottom: 1px solid #eaeaea;
+  }
+
+  .tabela-competencias th {
+    background: #000000;
+    color: #ffffff;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.82rem;
+    letter-spacing: 0.03em;
+  }
+
+  .tabela-competencias tbody tr:nth-child(even) {
+    background: #f7f7f7;
+  }
+
+  .tabela-competencias tbodytr:hover {
+    background: #fde9ea;
+  }
+
+  .badge {
+    display: inline-block;
+    background: rgba(255,255,255,0.12);
+    border: 1px solid rgba(255,255,255,0.3);
+    color: #ffffff;
+    font-size: 0.78rem;
+    padding: 0.35rem 0.9rem;
+    border-radius: 20px;
+    margin-bottom: 1.2rem;
+  }
+
+  .numlabel {
+    display: block;
+    font-family: 'Playfair Display', serif;
+    font-size: italic;
+    letter-spacing: 0.08em;
+    color: #df2531;
+    margin-bottom: -0.5rem;
+  }
+
+  .ferramentas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    margin-top: 1.6rem;
+  }
+
+  .ferramentas span {
+    background: #000000;
+    color: #ffffff;
+    font-size: 0.8rem;
+    padding: 0.4rem 0.9rem;
+    border-radius: 20px;
+    
+  }
+
+  .footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.2rem;
+    margin: 0.8rem 0;
+  }
+
+  .footer-links a {
+    color: #b0b0b0;
+    text-decoration: none;
+    font-size: 0.85rem;
+  }
+
+  .footer-links a:hover {
+    color: #df2531;
+  }
+
+  .backtotop {
+    color: #df2531;
+    text-decoration: none;
+    font-size: 0.82rem;
+  }
+
+    @keyframes aparecer {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .skillcard {
+    animation: aparecer 0.6s ease forwards;
+  }
+
+  .skillcard:nth-child(1) { animation-delay: 0.1s; }
+  .skillcard:nth-child(2) { animation-delay: 0.2s; }
+  .skillcard:nth-child(3) { animation-delay: 0.3s; }
+  .skillcard:nth-child(4) { animation-delay: 0.4s; }
+  .skillcard:nth-child(5) { animation-delay: 0.5s; }
+  
+</style>
+</head>
+<body>
+
+  <header>
+    <h1>Wagner Franice</h1>
+    <nav>
+      <a href="#inicio">Início</a>
+      <a href="#sobremim">Sobre Mim</a>
+      <a href="#percurso">Percurso</a>
+      <a href="#competencias">Competências</a>
+      <a href="#projectos">Projectos</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </header>
+
+  <section id="inicio" class="hero">
+    <span class="badge">• Disponível para estágios</span>
+    <img src="wrf.jpg" alt="Foto de Wagner Romão Franice" class="foto">
+    
+    <h2 class="titulo-grande">WAGNER<br>
+      <span class="destaque">FRANICE</span>
+    </h2>
+    <p class="subtitulo">Estudante de Informática no Transportes e Comunicações — ITC</p>
+    <p class="bio">
+      Sou estudante de Informática no Instituto de Transportes e Comunicações (ITC),
+      com foco em suporte Informático. Este portefólio reúne o meu
+      percurso escolar, competências e alguns projectos ligados à minha formação.
+    </p>
+    <div>
+      <a href="https://wa.me/258844567564" class="btn" target="_blank">
+        <i class="fa-brands fa-whatsapp"></i>WhatsApp
+      </a>
+      <a href="https://instagram.com/wagner_franice" class="btn" target="_blank">
+        <i class="fa-brands fa-instaagram"></i>Instagram
+      </a>
+      <a href="mailto:wagnerromaofranice@gmail.com" class="btn">
+        <i class="fa-solid fa-envelope"></i>E-mail
+      </a>
+    </div>
+  </section>
+
+  <section id="sobremim">
+    <span class="script">01 - QUEM SOU</span>
+    <h2>Sobre Mim</h2>
+    <p>
+      Sou estudante de Infotmática no Instituto de Transportes e Comunicações (ITC),
+      com foco em suporte informático. Gosto de resolver problemas técnicos, montar e
+      configurar computadores, e criar páginas web - este próprio portefólio foi
+      construído por mim, em HTML e CSS.
+    </p>
+    <p>
+      Tenho interesse em tecnologia, organização de processos e Comunicação, e procuro
+      sempre aprender ferramentas novas que me ajudem a crescer profissionalmente.
+    </p>
+  </section>
+
+  
+  <section id="percurso">
+    <span class="script">MEU</span>
+    <h2>Percurso académico</h2>
+    <ul class="percurso">
+      <li>
+        <div class="classe">5ª Classe</div>
+        <div class="escola">Escola: Externato Fatima</div>
+      </li>
+      <li>
+        <div class="classe">7ª Classe</div>
+        <div class="escola">Escola: Externato Fatima</div>
+      </li>
+      <li>
+        <div class="classe">10ª Classe</div>
+        <div class="escola">Escola: Escola Secundaria de Nkobe</div>
+      </li>
+    </ul>
+  </section>
+
+  <section id="competencias">
+    <span class="script">02 - O QUE SEI</span>
+    <h2>Competências</h2>
+    <div class="skillgrid">
+      <div class="skillcard">
+        <h3>Hardware</h3>
+        <p>Montagem, manunteção e diagnóstico de computador e periféricos</p>
+        <div class="barra"><div class="barra-fill" style="width: 65%;"></div></div>
+        <h3>Planeamento &amp; Logística</h3>
+        <p>Organização de operações, rotas e recursos com foco em eficiência.</p>
+        <div class="barra"><div class="barra-fill" style="width: 75%;"></div></div>
+      </div>
+      <div class="skillcard">
+        <h3>Suporte Informático</h3>
+        <p>Resolução de problemas de software, instalação de sistemas e assistência técnica</p>
+        <div class="barra"><div class="barra-fill" style="width: 70%;"></div></div>
+        <h3>Gestão</h3>
+        <p>Acompanhamento de tarefas, prazos e prioridades.</p>
+        <div class="barra"><div class="barra-fill" style="width: 70%;"></div></div>
+      </div>
+      <div class="skillcard">
+        <h3>HTML &amp; CSS</h3>
+        <p>Criação de páginas web estruturadas e estilizadas, como este portefólio</p>
+        <div class="barra"><div class="barra-fill" style="width: 60%;"></div></div>
+        <h3>Comunicação</h3>
+        <p>Transmissão clara de informação, escrita e oral, em equipa.</p>
+        <div class="barra"><div class="barra-fill" style="width: 80%;"></div></div>
+      </div>
+      <div class="skillcard">
+        <h3>Redes</h3>
+        <p>Noções básicas de configuração de redes e ligação de equipamentos</p>
+        <div class="barra"><div class="barra-fill" style="width: 55%;"></div></div>
+        <h3>Informática na Óptica do Utilizador</h3>
+        <p>Word, Excel, apresentações e ferramentas digitais.</p>
+        <div class="barra"><div class="barra-fill" style="width: 85%;"></div></div>
+      </div>
+    </div>
+    <div class="ferramentas">
+        <span>HTML5</span>
+        <span>CSS3</span>
+        <span>Design Responsivo</span>
+        <span>GitHub</span>
+        <span>Visual Studio Code</span>
+      </div>
+    
+  </section>
+
+  <section id="projectos">
+    <span class="script">03 - TRABALHOS</span>
+    <h2>Projectos</h2>
+    <div class="projectgrid">
+      <div class="projectcard">
+        <div class="projecting-wrap">
+          <img src="Bi.jpg" alt="Bilhete de Identidade" class="projectimg">
+        </div>
+        <span>Trabalho académico</span>
+        <h3>Bilhete de Identidade em HTML</h3>
+        <p>Reprodução da estrutura de um Bilhete de Identidade usando HTML e CSS</p>
+      </div>
+      <div class="projectcard">
+         <div class="projecting-wrap">
+          <img src="sistemas.jpeg" alt="Instalação de sistemas Operativos" class="projectimg">
+        <span>Projecto académico</span>
+        <h3>Instalação de sistemas Operativos </h3>
+        <p>Instalação, configuração e preparação de computadores para utilização, incluindo drivers e definições do sistema</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contacto" class="contacto-section">
+    <span class="script">04 - CONTACTO</span>
+    <h2>Contacto</h2>
+    <p>Disponível para estágios, trabalhos em grupo e novas oportunidades.</p>
+    <div>
+      <a href="https://wa.me/258844567564" class="btn" target="_blank">
+        <i class="fa-brands fa-whatsapp"></i>WhatsApp
+      </a>
+      <a href="https://instagram.com/wagner_franice" class="btn" target="_blank">
+        <i class="fa-brands fa-instaagram"></i>Instagram
+      </a>
+      <a href="mailto:wagnerromaofranice@gmail.com" class="btn">
+        <i class="fa-solid fa-envelope"></i>E-mail
+      </a>
+    </div>
+  </section>
+
+  <footer>
+    <p>Wagner Romão Franice</p>
+    <div class="footer-links">
+      <a href="https://instagram.com/wagner_franice" target="_blank">Instagram</a>
+      <a href="https://wa.me/258844567564" target="_blank">WhatsApp</a>
+    </div>
+    <a href="#inicio" class="backtotop">Voltar ao topo ⇮</a>
+  </footer>
+
+</body>
+</html>
